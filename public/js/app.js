@@ -6,6 +6,9 @@ console.log("client side js fileloaded")
  const messageOne=document.querySelector('#message-1')
  const messageTwo=document.querySelector('#message-2')
  const messageThree=document.querySelector('#message-3')
+//  const messageFour=document.querySelector('#message-4')
+//  const messageFive=document.querySelector('#message-5')
+ //const messageSix=document.querySelector('#message-6')
 
  
 
@@ -26,7 +29,9 @@ fetch('http://localhost:3000/weather?address='+location).then((response)=>{
         }
         messageOne.textContent=data.forecast
         messageTwo.textContent=data.location
-        messageThree.textContent=data.address
+
+       // messageSix.textContent=data.address
+        
         // console.log(data.forecast)
         // console.log(data.location)
         // console.log(data.address)

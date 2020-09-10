@@ -5,14 +5,20 @@ const geocode=(address,callback)=>{
     request({ url,json:true},(error,{body})=>{
         if(error){
           callback('Unable to connect to MapBOx services')
-        }else if(body.features.length==0){
+        }else if(body.features.length===0){
             callback('Unidentifed Location !!')
         }
         else{
             callback(undefined,{
                 latitude:body.features[0].center[1],
                 longitude:body.features[0].center[0],
-                location: body.features[0].place_name
+                location: body.features[0].place_name,
+        
+                // locality:body.features[0].context[0].text,
+                // region:body.features[0].context[2].text,
+                // regioncode:body.features[0].context[3].short_code
+
+
             })
         }
       

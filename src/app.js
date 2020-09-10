@@ -76,7 +76,7 @@ app.get('/weather',(req,res)=>{
 
 
 })
-app.get('/product',(req,res)=>{
+app.get('/WeatherUpdate',(req,res)=>{
     if(!req.query.search){
       return  res.send({
             error:'you musdt provide  a search term'
